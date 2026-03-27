@@ -1,11 +1,15 @@
 header {
-    color:beige;
+    background-color: pink;
 }
 
-body {
-    color: white;
+#about {
+    background-color: beige;
+}
+
+#contact {
+    background-color: pink;
 }
 
 footer {
-    color: pink;
+    background-color: pink;
 }
