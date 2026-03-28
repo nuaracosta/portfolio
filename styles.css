@@ -2,14 +2,23 @@ header {
     background-color: pink;
 }
 
-#about {
-    background-color: beige;
-}
-
 #contact {
     background-color: pink;
 }
 
 footer {
     background-color: pink;
+}
+
+#about {
+    background-color: beige;
+    display: flex;
+    align-items: flex-start; /* aligns image with top of text */
+    gap: 20px;               /* space between image and text */
+}
+
+#about img {
+  width: 200px;            /* control size */
+  height: auto;
+  border-radius: 12px;     /* optional: makes it cute */
 }
