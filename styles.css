@@ -4,11 +4,50 @@ header {
 
 #contact {
     background-color: pink;
+    align-items: center;
 }
 
 footer {
     background-color: pink;
+    align-items: center;
 }
+
+.site-header {
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  font-size: medium;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.nav-menu a:hover {
+    color: white;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+
 
 #about {
     background-color: beige;
