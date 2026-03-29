@@ -59,17 +59,53 @@ footer {
   opacity: 0.7;
 }
 
-
+/* about session */
 
 #about {
-    background-color: beige;
-    display: flex;
-    align-items: flex-start; /* aligns image with top of text */
-    gap: 20px;               /* space between image and text */
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 40px;  
 }
 
 #about img {
-  width: 200px;            /* control size */
+  width: 450px;
   height: auto;
-  border-radius: 12px;     /* optional: makes it cute */
+  /* border-radius: 12px; */
+  display: flex; 
+  box-shadow: 10px;
+  /* padding: 10px 10px; */
+  border-radius: 40px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.15);
+}
+
+#about-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#about-text h2 {
+  margin: 0 0 15px 0;
+  font-size: 60px;
+  text-align: center;
+}
+
+#about-text p {
+  margin: 0;
+  font-size: 40px;
+}
+
+/* how can i help you session */
+
+#canihelp {
+  background-color: pink;
+  text-align: right;
+  font-size: 60px;
+}
+
+#canihelp > p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
 }
