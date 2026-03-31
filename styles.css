@@ -1,5 +1,5 @@
 header {
-    background-color: pink;
+    background-color: #1E1E24;
 }
 
 #contact {
@@ -21,7 +21,7 @@ footer {
 }
 
 .site-header {
-  background-color: pink;
+  background-color: 1E1E24;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,13 +41,13 @@ footer {
 
 .nav-menu a {
   text-decoration: none;
-  color: black;
+  color: #FFEAD0;
   font-weight: 600;
   font-size: 30px;
 }
 
 .nav-menu a:hover {
-    color: white;
+    color: #ED217C;
 }
 
 .header-right {
@@ -70,7 +70,7 @@ footer {
 /* about me session */
 
 #about {
-  background-color: white;
+  background-color: #FFEAD0;;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,23 +102,39 @@ footer {
 
 #about-text p {
   margin: 0;
-  font-size: 40px;
+  font-size: 38px;
 }
 
 /* how can i help you session */
 
 #canihelp {
-  background-color: pink;
+  background-color: #1E1E24;
+  color: #FFEAD0;
+  padding: 90px 80px;
   display: flex;
-  flex-direction: column;   
-  align-items: flex-start;   
-  text-align: left;  
-  font-size: 40px;
-  padding: 80px 40px;      
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-#canihelp > ul {
-  text-align: center;
+#canihelp h2 {
+  color: #ED217C;
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  line-height: 1.05;
+  
+}
+
+#canihelp ul {
+  margin: 0;
+  padding-left: 40px;
+  font-size: 38px;
+  line-height: 1.4;
+}
+
+#canihelp li {
+  margin-bottom: 10px;
 }
 
 
