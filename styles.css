@@ -14,6 +14,7 @@ body {
 
 footer {
     background-color: pink;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +67,7 @@ footer {
   opacity: 0.7;
 }
 
-/* about session */
+/* about me session */
 
 #about {
   background-color: white;
@@ -108,11 +109,30 @@ footer {
 
 #canihelp {
   background-color: pink;
-  text-align: right;
-  font-size: 60px;
+  display: flex;
+  flex-direction: column;   
+  align-items: flex-start;   
+  text-align: left;  
+  font-size: 40px;
+  padding: 80px 40px;      
 }
 
-#canihelp > p {
-  font-family: 'Times New Roman', Times, serif;
+#canihelp > ul {
+  text-align: center;
+}
+
+
+/* portfolio session */
+#portfolio {
+  background-color: white;
+  text-align: center;
+  font-size: 40px;
+}
+
+/* contact session */
+
+#contact {
+  background-color: pink;
+  text-align: center;
   font-size: 40px;
 }
