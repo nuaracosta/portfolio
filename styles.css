@@ -2,10 +2,6 @@ header {
     background-color: #1E1E24;
 }
 
-#contact {
-    background-color: pink;
-    align-items: center;
-}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -140,7 +136,7 @@ footer {
 
 /* portfolio session */
 #portfolio {
-  background-color: white;
+  background-color: #FFEAD0;
   text-align: center;
   font-size: 40px;
 }
@@ -148,7 +144,14 @@ footer {
 /* contact session */
 
 #contact {
-  background-color: pink;
+  background-color: #1E1E24;
+  color: #FFEAD0;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
   font-size: 40px;
+}
+
+#contact a:hover {
+    color: #ED217C;
 }
