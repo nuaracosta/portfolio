@@ -259,6 +259,7 @@ header {
   color: var(--mid-rose);
   margin: 0;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* "View project" link at the bottom of the card */
