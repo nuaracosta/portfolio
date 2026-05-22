@@ -1,25 +1,36 @@
-header {
-    background-color: #1E1E24;
+/* color palatte */
+:root {
+  /* nav bar - contact section bg - all headings */
+  --deep-rose: #4B1528;
+  /* hero bg - projects bg - footer bg - page base */
+  --warm-cream: #F1EFE8;
+  /* how can i help section bg  */
+  --soft-blush: #FBEAF0; 
+  /* project card thumbnails - navbar text - send button */
+  --light-pink: #f4c0d1;
+  /* bullet dots - hover accents */
+  --warm-pink: #D4537E;
+  /* contact form fields bg - body text on blush */
+  --mid-rose: #72243E;
+  /* photo placeholder - borders - footer text */
+  --warm-grey:#D3D1C7;
 }
 
-
+/* === BODY === */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
+  background-color: var(--warm-cream);
 }
 
-footer {
-    margin: 0;
-    padding: 90px 80px;
-    background-color: pink;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/* === HEADER === */
+header {
+    background-color: var(--deep-rose);
 }
 
 .site-header {
-  background-color: 1E1E24;
+  background-color: var(--deep-rose);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,13 +50,13 @@ footer {
 
 .nav-menu a {
   text-decoration: none;
-  color: #FFEAD0;
+  color: var(--light-pink);
   font-weight: 600;
   font-size: 30px;
 }
 
 .nav-menu a:hover {
-    color: #ED217C;
+    color: var(--warm-pink);
 }
 
 .header-right {
@@ -65,10 +76,10 @@ footer {
   opacity: 0.7;
 }
 
-/* about me session */
+/* === ABOUT SECTION === */
 
 #about {
-  background-color: #FFEAD0;;
+  background-color: var(--warm-cream);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,12 +90,18 @@ footer {
 #about img {
   width: 450px;
   height: auto;
-  /* border-radius: 12px; */
-  display: flex; 
-  box-shadow: 10px;
-  /* padding: 10px 10px; */
-  border-radius: 40px;
-  box-shadow: 0 10px 10px rgba(0,0,0,0.15);
+  border-radius: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+  border: 3px solid var(--warm-grey);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+#about img:hover {
+  /* transform: scale(1.04) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(75,21,40,0.22); */
+
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 }
 
 #about-text {
@@ -96,18 +113,20 @@ footer {
   margin: 0 0 15px 0;
   font-size: 60px;
   text-align: center;
+  color: var(--deep-rose);
 }
 
 #about-text p {
   margin: 0;
   font-size: 38px;
+  color: var(--mid-rose);
 }
 
-/* how can i help you session */
+/* === HOW CAN I HELP SESSION === */
 
 #canihelp {
-  background-color: #1E1E24;
-  color: #FFEAD0;
+  background-color: var(--soft-blush);
+  color: var(--mid-rose);
   padding: 90px 80px;
   display: flex;
   flex-direction: column;
@@ -116,7 +135,7 @@ footer {
 }
 
 #canihelp h2 {
-  color: #ED217C;
+  color: var(--deep-rose);
   font-size: 42px;
   font-weight: 700;
   margin: 0 0 25px 0;
@@ -129,38 +148,32 @@ footer {
   padding-left: 40px;
   font-size: 38px;
   line-height: 1.4;
+  color: var(--mid-rose);
 }
 
 #canihelp li {
   margin-bottom: 10px;
 }
 
+#canihelp li::marker {
+  color: var(--warm-pink);
+}
 
-/* portfolio session */
-/* #portfolio {
-  margin: 0;
-  padding: 90px 80px;
-  background-color: #FFEAD0;
-  text-align: center;
-  font-size: 42px;
-} */
-
-/* REPLACE your current #portfolio rule with this */
+/* === PORTFOLIO SECTION === */
 #portfolio {
   padding: 90px 80px;
-  background-color: #FFEAD0;
+  background-color: var(--warm-cream);
 }
 
 #portfolio h2 {
   font-size: 42px;
   font-weight: 700;
   margin: 0 0 40px 0;
-  color: #1E1E24;
+  color: var(--deep-rose);
   text-align: center;
 }
 
 /* ---- Portfolio Cards Grid ---- */
-
 /* Grid layout: auto-fills columns with a minimum of 200px each */
 .cards-grid {
   display: grid;
@@ -170,19 +183,18 @@ footer {
 
 /* Base card style */
 .portfolio-card {
-  background: #fff;
+  background: var(--light-pink);
   border-radius: 20px;
   padding: 28px 20px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  border: 1px solid var(--warm-grey);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
   cursor: pointer;
-
   /* Smooth transition for the hover lift effect */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
   /* Play the float animation once on page load, then stop */
   animation: floatCard 0.8s ease-out 1 forwards;
 }
@@ -210,25 +222,25 @@ footer {
 
 /* Icon box inside each card */
 .card-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  background: #ED217C;
+  width: 65px;
+  height: 65px;
+  border-radius: 20px;
+  background: var(--light-pink);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--deep-rose);
   font-size: 26px;
 }
 
 /* Small colored label above the title */
 .card-tag {
-  font-size: 11px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #ED217C;
-  background: #fde8f2;
+  color: var(--mid-rose);
+  background: var(--soft-blush);
   padding: 3px 10px;
   border-radius: 20px;
 }
@@ -237,44 +249,67 @@ footer {
 .card-title {
   font-size: 16px;
   font-weight: 700;
-  color: #1E1E24;
+  color: var(--deep-rose);
   margin: 0;
 }
 
 /* Short project description */
 .card-desc {
-  font-size: 13px;
-  color: #888;
+  font-size: 16px;
+  color: var(--mid-rose);
   margin: 0;
   line-height: 1.5;
 }
 
 /* "View project" link at the bottom of the card */
 .card-link {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
-  color: #ED217C;
+  color: var(--warm-pink);
   text-decoration: none;
   margin-top: 4px;
 }
 
 .card-link:hover {
   text-decoration: underline;
+  color: var(--mid-rose);
 }
 
-/* contact session */
+/* === CONTACT SECTION === */
 
 #contact {
   margin: 0;
   padding: 90px 80px;
-  background-color: #1E1E24;
-  color: #FFEAD0;
+  background-color: var(--deep-rose);
+  color: var(--warm-cream);
   font-weight: 600;
   font-size: 30px;
   text-align: center;
   font-size: 40px;
 }
 
+#contact h2 {
+  color: var(--warm-cream)
+}
+
 #contact a:hover {
-    color: #ED217C;
+    color: var(--warm-pink);
+}
+
+/* === FOOTER === */
+
+footer {
+    margin: 0;
+    padding: 20px 40px;
+    background-color: var(--warm-cream);
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-top: 2px solid var(--warm-grey); */
+}
+
+footer h3 {
+  color: var(--deep-rose);
+  margin: 0;
 }
