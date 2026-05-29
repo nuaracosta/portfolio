@@ -272,42 +272,43 @@
  
     /* Retrospective section */
     .retrospective {
-      background-color: var(--soft-blush);
       padding: 70px 80px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
+      text-align: center;
     }
- 
-    .retrospective-col h2 {
+
+    .retrospective h2 {
       font-size: 42px;
       font-weight: 700;
       color: var(--deep-rose);
-      margin: 0 0 25px;
+      margin: 0 0 40px;
       text-align: center;
     }
- 
-    .retrospective-col ul {
-      list-style: disc;
-      padding-left: 40px;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
+
+    .retrospective ol {
+      list-style: decimal;
+      display: inline-block;
+      padding: 0 80px;
       gap: 10px;
-      
+      text-align: center;
+      padding-left: 30px;
+      margin: 0;
     }
- 
-    .retrospective-col ul li {
+
+    .retrospective ol li {
       font-size: 38px;
       color: var(--mid-rose);
       line-height: 1.4;
+      margin-bottom: 16px;
       text-align: center;
+      padding-left: 10px;
+      
     }
- 
-    .retrospective-col ul li::marker {
+
+    .retrospective-col ol li::marker {
       color: var(--warm-pink);
+      font-weight: 700;
     }
+
  
     /* Responsive */
     @media (max-width: 768px) {
@@ -539,15 +540,14 @@
       </section>
 
       <!-- THINGS TO BE IMPROVED -->
-       <section class="retrospective-col">
-        <div class="retrospective-col">
+       <section class="retrospective">
         <h2>Things to be improved</h2>
-        <ul>
+        <ol>
           <li>Less focus on mentality and more hands-on practice.</li>
           <li>More templates students could use on Canva.</li>
           <li>Better feedback from students regarding the product.</li>
-        </ul>
-      </div>
+        </ol>
+      
        </section>
   
 </main>
