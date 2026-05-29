@@ -11,6 +11,332 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 
+     <style>
+    /* === PAGE-LEVEL OVERRIDES (showup.html only) === */
+ 
+    /* Hero / intro block */
+    .showup-hero {
+      background-color: var(--warm-cream);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 60px 80px 40px;
+    }
+ 
+    .showup-hero img.course-logo {
+      width: 140px;
+      height: auto;
+      margin-bottom: 32px;
+      align-self: center;
+    }
+ 
+    .showup-hero h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--deep-rose);
+      margin: 0 0 16px;
+      width: 100%;
+      text-align: center;
+    }
+ 
+    .showup-hero p {
+      font-size: 38px;
+      color: var(--mid-rose);
+      line-height: 1.5;
+      margin: 0 0 12px;
+      width: 100%;
+    }
+ 
+    /* Solution block */
+    .showup-solution {
+      background-color: var(--soft-blush);
+      padding: 60px 80px;
+    }
+ 
+    .showup-solution h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--deep-rose);
+      margin: 0 0 30px;
+      text-align: center;
+    }
+ 
+    .solution-body {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 60px;
+      margin-bottom: 40px;
+    }
+ 
+    .solution-text {
+      flex: 1;
+    }
+ 
+    .showup-solution p {
+      font-size: 38px;
+      color: var(--mid-rose);
+      line-height: 1.5;
+      margin: 0 0 20px;
+    }
+ 
+    .showup-solution img {
+      width: 450px;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+      border: 3px solid var(--warm-grey);
+      flex-shrink: 0;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+ 
+    .showup-solution img:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    }
+ 
+    /* Stats row */
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 36px;
+    }
+ 
+    .stat-pill {
+      background: var(--warm-cream);
+      border: 1px solid var(--warm-grey);
+      border-radius: 16px;
+      padding: 20px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      min-width: 140px;
+    }
+
+    .stat-pill:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    }
+ 
+    .stat-pill strong {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--deep-rose);
+    }
+ 
+    .stat-pill span {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--mid-rose);
+      text-align: center;
+    }
+ 
+    /* Modules section */
+    .modules-section {
+      background-color: var(--warm-cream);
+      padding: 70px 80px;
+    }
+ 
+    .modules-section h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--deep-rose);
+      text-align: center;
+      margin: 0 0 40px;
+    }
+ 
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+    }
+ 
+    /* Module cards — same base as .portfolio-card */
+    .module-card {
+      background: var(--light-pink);
+      border-radius: 20px;
+      padding: 28px 22px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+      border: 1px solid var(--warm-grey);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      animation: floatCard 0.8s ease-out 1 forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+ 
+    .module-card:nth-child(1) { animation-delay: 0s; }
+    .module-card:nth-child(2) { animation-delay: 0.10s; }
+    .module-card:nth-child(3) { animation-delay: 0.20s; }
+    .module-card:nth-child(4) { animation-delay: 0.30s; }
+    .module-card:nth-child(5) { animation-delay: 0.40s; }
+    .module-card:nth-child(6) { animation-delay: 0.50s; }
+ 
+    .module-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.13);
+    }
+ 
+    .module-tag {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mid-rose);
+      background: var(--soft-blush);
+      padding: 4px 12px;
+      border-radius: 20px;
+      align-self: flex-start;
+    }
+ 
+    .module-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--deep-rose);
+      margin: 0;
+      line-height: 1.4;
+    }
+ 
+    .module-lessons {
+      list-style: disc;
+      padding-left: 22px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+ 
+    .module-lessons li {
+      font-size: 16px;
+      color: var(--mid-rose);
+      line-height: 1.5;
+    }
+ 
+    .module-lessons li::marker {
+      color: var(--warm-pink);
+    }
+ 
+    /* Testimonials section */
+    .testimonials {
+      background-color: var(--deep-rose);
+      padding: 70px 80px;
+      text-align: center;
+    }
+ 
+    .testimonials h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--warm-cream);
+      margin: 0 0 40px;
+    }
+ 
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+ 
+    .testimonial-card {
+      background: rgba(241, 239, 232, 0.10);
+      border: 1px solid rgba(241, 239, 232, 0.18);
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+ 
+    .testimonial-quote {
+      font-size: 20px;
+      font-style: italic;
+      color: var(--light-pink);
+      line-height: 1.7;
+      margin: 0;
+    }
+ 
+    .testimonial-quote::before { content: '\201C'; }
+    .testimonial-quote::after  { content: '\201D'; }
+ 
+    .testimonial-author {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--warm-grey);
+      letter-spacing: 0.04em;
+    }
+ 
+    /* Retrospective section */
+    .retrospective {
+      background-color: var(--soft-blush);
+      padding: 70px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+ 
+    .retrospective-col h2 {
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--deep-rose);
+      margin: 0 0 25px;
+      text-align: center;
+    }
+ 
+    .retrospective-col ul {
+      list-style: disc;
+      padding-left: 40px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      
+    }
+ 
+    .retrospective-col ul li {
+      font-size: 38px;
+      color: var(--mid-rose);
+      line-height: 1.4;
+      text-align: center;
+    }
+ 
+    .retrospective-col ul li::marker {
+      color: var(--warm-pink);
+    }
+ 
+    /* Responsive */
+    @media (max-width: 768px) {
+      .showup-hero,
+      .showup-solution,
+      .modules-section,
+      .testimonials,
+      .retrospective {
+        padding: 50px 24px;
+      }
+ 
+      .showup-hero h2,
+      .showup-solution h2,
+      .modules-section h2,
+      .testimonials h2,
+      .retrospective-col h2 { font-size: 28px; }
+ 
+      .showup-hero p,
+      .showup-solution p { font-size: 22px; }
+ 
+      .retrospective { grid-template-columns: 1fr; gap: 36px; }
+      .retrospective-col ul li { font-size: 22px; }
+ 
+      .stats-row { gap: 14px; }
+      .stat-pill strong { font-size: 28px; }
+      .stat-pill span { font-size: 14px; }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -18,13 +344,13 @@
   <!-- HEADER -->
   <header class="site-header">
   <div class="logo">
-    <img src="img/logo.png" alt="Nuara Costa logo">
+    <img src="img/2.png" alt="Nuara Costa logo">
   </div>
 
   <nav class="nav-menu">
-    <a href="#home">Home</a>
+    <a href="portfolioweb.html">Home</a>
     <a href="portfolioweb.html#about">About</a>
-    <a href="#portfolio">Portfolio</a>
+    <a href="portfolioweb.html#portfolio">Portfolio</a>
     <a href="https://nuaracosta.substack.com/">Substack</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -36,69 +362,193 @@
 </header>
 
 <main>
-  <!-- add the show up logo here -->
+  <!-- HERO / THE PROBLEM -->
+
+  <section class="showup-hero">
+    <img class="course-logo" src="img/show-up-logo.png" alt="Show Up - Insta for Teachers Logo">
     <h2>The Problem</h2>
     <p>In 2020, many EFL teachers in Brazil lost their jobs, and had to pivot into 
       working online. I was one of these teachers and started using Instagram to spread
       the word to my friends that I was teaching private EFL classes. From then on, I was able
       to attract over 30 students and successfully make the transition from teaching at schools into 
       my own teaching practice.</p>
+  </section>
 
-      <!-- ADD SOME PICTURE OF THE COURSE HERE  -->
+  <!-- THE SOLUTION -->
 
-      <h2>The Solution</h2>
+  
+  <section class="showup-solution">
+    <h2>The Solution</h2>
 
-      <p><strong>Show Up - Insta for Teachers</strong> was the solution me and my mentor at the time found to help those teachers in need. Through online classes, we 
+    <div class="solution-body">
+      <div class="solution-text">
+        <p><strong>Show Up - Insta for Teachers</strong> was the solution me and my mentor at the time found to help those teachers in need. Through online classes, we 
         were able to help teachers with low or zero Instagram knowledge and market their product to their audiences, and therefore, bring students into 
         their businesses.
-    </p>
-
-      <p>The course was sold on <strong>Hotmart</strong> to a Brazilian audience, from November 2020 to September 2021. 
+        </p>
+        <p>The course was sold on <strong>Hotmart</strong> to a Brazilian audience, from November 2020 to September 2021. 
         We managed over 130 students in that time, and it had online modules as well as live Q&A classes 
         every month for anyone in the cohort who wished to take part. </p>
 
-      <!-- STATS -->
-      <div class="stats-row">
+      </div>
+      <img src="img/showup-example1.png" alt="Show Up screenshot">
+    </div>
+    
+         <div class="stats-row">
         <div class="stat-pill">
-          <strong>100+</strong>
+          <strong>130+</strong>
           <span>students enrolled</span>
         </div>
-
-        <div class="stats-pill">
+        <div class="stat-pill">
           <strong>6</strong>
           <span>modules</span>
         </div>
-
-         <div class="stats-pill">
+        <div class="stat-pill">
           <strong>Monthly</strong>
-          <span>live Q&A classes</span>
+          <span>live Q&amp;A classes</span>
+        </div>
+        <div class="stat-pill">
+          <strong>10 mo.</strong>
+          <span>Nov 2020 – Sep 2021</span>
         </div>
       </div>
+      
+  </section>
 
-        <!-- ADD CARDS LIKE THE ONES ON THE MAIN PAGE FOR THE PORTFOLIO, BUT THIS TIME THE CARDS 
-         SHOW THE MODULES OF THE COURSE  -->
-      <section class="modules-section">
-        <h2>Modules</h2>
-        <div class="modules-grid">
-          <div class="module-card">
-            <p class="module-tag">Module 1</p>
-            <h3>Foundation: Who are you on Instagram</h3>
-            <ul class="module-lessons">
-              <li>What's your purpose?</li>
-              <li>Discovering your persona</li>
-              <li>Finding your niche</li>
-              <li>Competence Wheel</li>
-              <li>Opportunities and Threads</li>
-              <li>Working on your confidence</li>
-              <li>Making your creativity work for you</li>
-            </ul>
-          </div>
-
-
+  <!-- MODULES -->
+  <section class="modules-section">
+      <h2>Modules</h2>
+      <div class="modules-grid">
+ 
+        <div class="module-card">
+          <span class="module-tag">Module 1</span>
+          <h3>Foundation: Who are you on Instagram?</h3>
+          <ul class="module-lessons">
+            <li>What's your purpose?</li>
+            <li>What's your dream?</li>
+            <li>Discovering your persona</li>
+            <li>Finding your niche</li>
+            <li>Competence Wheel</li>
+            <li>Resources and obstacles</li>
+            <li>Working on your confidence</li>
+            <li>Making your creativity work for you</li>
+            <li>Movement and cause</li>
+          </ul>
         </div>
+ 
+        <div class="module-card">
+          <span class="module-tag">Module 2</span>
+          <h3>Setting up your profile</h3>
+          <ul class="module-lessons">
+            <li>Personal account: keep it or not?</li>
+            <li>Choosing your profile type</li>
+            <li>Profile name and bio</li>
+            <li>Positioning</li>
+            <li>Creating your visual identity</li>
+            <li>Where is everything? (buttons and interface)</li>
+            <li>Fixing Instagram bugs</li>
+          </ul>
+        </div>
+ 
+        <div class="module-card">
+          <span class="module-tag">Module 3</span>
+          <h3>Creating content</h3>
+          <ul class="module-lessons">
+            <li>How to create relevant content</li>
+            <li>Writing captions and finding your tone of voice</li>
+            <li>Types of attention-grabbing headlines</li>
+            <li>How to end a post</li>
+            <li>Call to Action (CTA)</li>
+            <li>Feed: what to post</li>
+            <li>Editorial calendar</li>
+          </ul>
+        </div>
+ 
+        <div class="module-card">
+          <span class="module-tag">Module 4</span>
+          <h3>Stories, Reels, and other formats</h3>
+          <ul class="module-lessons">
+            <li>Instagram Stories</li>
+            <li>Stories shortcuts</li>
+            <li>How to make Reels</li>
+            <li>Planning and captioning Reels</li>
+            <li>Adding voiceover to Reels</li>
+            <li>How to use Inshot</li>
+            <li>IGTV and Lives</li>
+          </ul>
+        </div>
+ 
+        <div class="module-card">
+          <span class="module-tag">Module 5</span>
+          <h3>Growth and engagement</h3>
+          <ul class="module-lessons">
+            <li>The importance of niche and positioning</li>
+            <li>Relevant content</li>
+            <li>Links in bio</li>
+            <li>Instagram and relationship-building</li>
+            <li>Partnerships and Takeovers</li>
+            <li>Giveaways: worth it or not?</li>
+            <li>How to always have something to post</li>
+          </ul>
+        </div>
+ 
+        <div class="module-card">
+          <span class="module-tag">Module 6</span>
+          <h3>Metrics, monetization, and mindset</h3>
+          <ul class="module-lessons">
+            <li>Insights and checking your metrics</li>
+            <li>Are numbers everything?</li>
+            <li>Building authority</li>
+            <li>When and how to sponsor posts</li>
+            <li>Changing your niche</li>
+            <li>Instagram and mental health</li>
+            <li>Instagram updates</li>
+          </ul>
+        </div>
+ 
+      </div>
+    </section>
+
+      <!-- TESTIMONIALS -->
+
+      <section class="testimonials">
+        <h2>Testimonials</h2>
+      <div class="testimonials-grid">
+ 
+        <!-- Replace with real quotes when you have them -->
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Show Up was a great base for my Instagram positioning.</p>
+          <span class="testimonial-author">— Amanda Onishi, Brazil</span>
+        </div>
+ 
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Now I know who's my persona and what's my niche.</p>
+          <span class="testimonial-author">— Giovanna Marinho, Brazil</span>
+        </div>
+ 
+        <div class="testimonial-card">
+          <p class="testimonial-quote">I was able to define my niche and design my persona.</p>
+          <span class="testimonial-author">— Luanny Bombonatto, Brazil</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">Nuara made me understand Instagram differently.</p>
+          <span class="testimonial-author">— Elina Moreira, Brazil</span>
+        </div>
+      </div>
       </section>
 
-      <!-- add a testimonial section -->
+      <!-- THINGS TO BE IMPROVED -->
+       <section class="retrospective-col">
+        <div class="retrospective-col">
+        <h2>Things to be improved</h2>
+        <ul>
+          <li>Less focus on mentality and more hands-on practice.</li>
+          <li>More templates students could use on Canva.</li>
+          <li>Better feedback from students regarding the product.</li>
+        </ul>
+      </div>
+       </section>
   
 </main>
 
