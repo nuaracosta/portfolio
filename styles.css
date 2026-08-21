@@ -325,8 +325,8 @@ footer h3 {
   }
 
   #about img {
-    width: 50%;
-    max-width: 100px;
+    width: 100%;
+    max-width: 320px;
   }
 
   #about-text h2 { font-size: 36px; }
