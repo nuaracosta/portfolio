@@ -318,40 +318,30 @@ footer h3 {
 /* === PHONE ADJUSTMENTS === */
 
 @media (max-width: 768px) {
-  /* stack about section vertically */
-  #about {
-    flex-direction: column;
-    padding: 40px 20px;
-  }
+  /* ...keep your other rules (about, canihelp, portfolio, contact)... */
 
-  #about img {
-    width: 100%;
-    max-width: 320px;
-  }
-
-  #about-text h2 { font-size: 36px; }
-  #about-text p  { font-size: 20px; }
-
-  /* shrink section padding */
-  #canihelp, #portfolio, #contact {
-    padding: 50px 24px;
-  }
-
-  #canihelp h2  { font-size: 28px; }
-  #canihelp ul  { font-size: 22px; }
-
-  /* stack or wrap the nav */
   .site-header {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 12px;
     padding: 16px 20px;
   }
 
+  .logo img {
+    width: 70px;
+  }
+
   .nav-menu {
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px 16px;
     justify-content: center;
   }
 
-  .nav-menu a { font-size: 18px; }
+  .nav-menu a {
+    font-size: 16px;
+  }
+
+  .header-right img {
+    width: 40px;
+  }
 }
