@@ -111,14 +111,14 @@ header {
 
 #about-text h2 {
   margin: 0 0 15px 0;
-  font-size: 60px;
+  font-size: 45px;
   text-align: center;
   color: var(--deep-rose);
 }
 
 #about-text p {
   margin: 0;
-  font-size: 38px;
+  font-size: 25px;
   color: var(--mid-rose);
 }
 
@@ -127,7 +127,7 @@ header {
 #canihelp {
   background-color: var(--soft-blush);
   color: var(--mid-rose);
-  padding: 90px 80px;
+  padding: 80px 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -136,29 +136,34 @@ header {
 
 #canihelp h2 {
   color: var(--deep-rose);
-  font-size: 42px;
+  font-size: 36px;
   font-weight: 700;
-  margin: 0 0 25px 0;
-  line-height: 1.05;
-  
+  margin: 0 0 28px 0;
+  line-height: 1.2;
 }
 
 #canihelp ul {
   margin: 0;
-  padding-left: 40px;
-  font-size: 38px;
-  line-height: 1.4;
+  padding-left: 24px;
+  font-size: 25px; /* Scaled down from 38px for crisp readability */
+  line-height: 1.6;
   color: var(--mid-rose);
+  font-weight: 400; /* Regular, non-heavy weight */
 }
 
 #canihelp li {
-  margin-bottom: 10px;
+  margin-bottom: 20px; /* Space between bullet points */
+  -webkit-font-smoothing: antialiased; /* Cleans up MacOS/Safari rendering */
+}
+
+#canihelp li strong {
+  font-weight: 600;
+  color: var(--deep-rose); /* Makes lead-in bold titles pop softly */
 }
 
 #canihelp li::marker {
   color: var(--warm-pink);
 }
-
 /* === PORTFOLIO SECTION === */
 #portfolio {
   padding: 90px 80px;
