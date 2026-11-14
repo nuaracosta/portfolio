@@ -76,9 +76,9 @@ header {
   opacity: 0.7;
 }
 
-/* === ABOUT SECTION === */
+/* === ABOUT ME SECTION === */
 
-#about {
+#about2 {
   background-color: var(--warm-cream);
   display: flex;
   align-items: center;
@@ -87,7 +87,7 @@ header {
   padding: 80px 40px;  
 }
 
-#about img {
+#about2 img {
   width: 450px;
   height: auto;
   border-radius: 20px;
@@ -96,7 +96,34 @@ header {
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-#about img:hover {
+#about-text {
+  display: flex;
+  flex-direction: column;
+}
+
+#about-text h2 {
+  margin: 0 0 15px 0;
+  font-size: 45px;
+  text-align: center;
+  color: var(--deep-rose);
+}
+
+#about-text p {
+  margin: 0;
+  font-size: 25px;
+  color: var(--mid-rose);
+}
+
+/* ABOUT SESSION IN MAIN PAGE */
+
+#about1 img {
+  width: 450px;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+#about1 img:hover {
   /* transform: scale(1.04) rotate(-1deg);
   box-shadow: 0 20px 40px rgba(75,21,40,0.22); */
 
